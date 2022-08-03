@@ -2,7 +2,7 @@ from kivy.app import App
 from kivy.uix.widget import Widget
 
 
-class MainWidget(Widget):
+class MojeWidgety(Widget):
     pass
 
 class MyryProgram(App):
