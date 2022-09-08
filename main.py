@@ -4,7 +4,14 @@ from ctypes import windll, Structure, c_long, byref
 import time
 
 class MojeWidgety(Widget):
-    pass
+    def on_touch_down(self, touch):
+        touch.grab(self)
+        posX = queryMousePositionX()
+        posY = queryMousePositionY()
+        print(posY, posX)
+
+
+
 
 class MyryProgram(App):
     pass
@@ -25,8 +32,6 @@ def queryMousePositionY():
     windll.user32.GetCursorPos(byref(pt))
     return {pt.y}
 
-posX = queryMousePositionX()
-posY = queryMousePositionY()
-print(posX,posY)
+
 
 MyryProgram().run()
