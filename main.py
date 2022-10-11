@@ -13,4 +13,3 @@ class InterfaceApp(App):
         return Interface()
 
 InterfaceApp().run()
-
