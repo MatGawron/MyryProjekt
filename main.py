@@ -3,6 +3,16 @@ from kivy.uix.widget import Widget
 from ctypes import windll, Structure, c_long, byref
 import time
 
+class Interface(Widget):
+    def guzik_dul(self):
+        print("gUZIK  W dole ")
+
+class InterfaceApp(App):
+
+    def build(self):
+        return Interface()
+
+
 class MojeWidgety(Widget):
     def on_touch_down(self, touch):
         touch.grab(self)
@@ -34,4 +44,9 @@ def queryMousePositionY():
 
 
 
+
+InterfaceApp().run()
 MyryProgram().run()
+#from kivy.app import App
+#from kivy.uix.widget import Widget
+
