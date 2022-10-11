@@ -1,7 +1,8 @@
 from kivy.app import App
 from kivy.uix.widget import Widget
 from ctypes import windll, Structure, c_long, byref
-import time
+
+import GuzikWyglad
 
 class Interface(Widget):
     def guzik_dul(self):
