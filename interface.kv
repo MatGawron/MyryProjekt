@@ -26,7 +26,7 @@
             pos: self.x, self.y
     BoxLayout:
         size_hint: None, None
-        size: 500, 100
+        size: 500, 75
         spacing: 45
         padding: 4,4,4,4
         canvas.before:
@@ -36,18 +36,31 @@
                 size: self.width, self.height
                 pos: self.x, self.y
         GuzikWyglad:
-
             id: naszguzik
             on_release: root.guzik_click()
+            LED:
+                id:ledguzik1
+                pos_hint_x: None
+                pos_hint_y: None
+                pos: 18,50
+
 
         GuzikWyglad:
-
             id: naszguzik2
             on_release: root.guzik_click2()
+            LED:
+                id:ledguzik1
+                pos_hint_x: None
+                pos_hint_y: None
+                pos: 18,50
         GuzikWyglad:
-
             id: naszguzik3
             on_release: root.guzik_click3()
+            LED:
+                id:ledguzik1
+                pos_hint_x: None
+                pos_hint_y: None
+                pos: 18,50
 
     GridLayout:
         rows: 2
