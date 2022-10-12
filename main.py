@@ -1,4 +1,6 @@
 from kivy.app import App
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.widget import Widget
 from kivy.uix.button import Button
 from kivy.properties import BooleanProperty
@@ -18,12 +20,12 @@ class Interface(Widget):
         self.odklikujka_Guzika()
         self.ids.naszguzik.selected = nastpepny_stan
         print("gUZIK  W k l i k n i e n t y")
-    def guzik_click(self):
+    def guzik_click2(self):
         nastpepny_stan = not self.ids.naszguzik2.selected
         self.odklikujka_Guzika()
         self.ids.naszguzik2.selected = nastpepny_stan
         print("guz2  W k l i k n i e n t y")
-    def guzik_click(self):
+    def guzik_click3(self):
         nastpepny_stan = not self.ids.naszguzik3.selected
         self.odklikujka_Guzika()
         self.ids.naszguzik3.selected = nastpepny_stan
