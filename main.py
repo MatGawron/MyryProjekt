@@ -54,12 +54,12 @@ class Interface(Widget):
         else:
             print("Guzik 3 nieaktywny")
 
-   # def guzik_clickLED(LED):
+    def guzik_clickLED(LED):
        # liczpa = random.randint(1, 5)
        # xx = "led"+str(liczpa)
        # print(type(xx))
-       # ledzikk = not LED.ids.led2.ledzik
-       # LED.ids.led2.ledzik = ledzikk
+        ledzikk = not LED.ids.led2.ledzik
+        LED.ids.led2.ledzik = ledzikk
 
 
 class InterfaceApp(App):

@@ -1,12 +1,13 @@
 <GuzikWyglad>
-    size: 200, 200
-    size_hint: None, None
-    canvas.before:
+    background_color: (214/255.0, 222/255.0, 213/255.0)
+    background_normal: ''
+    canvas:
         Color:
             rgb: (0,0,1) if self.selected else (0.2, 0.7, 0,9)
-        Rectangle:
-            size: self.width, self.height
-            pos: self.x, self.y
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [26]
 
 <LED>
     canvas:
@@ -25,7 +26,7 @@
             pos: self.x, self.y
     BoxLayout:
         size_hint: None, None
-        size: 300, 300
+        size: 500, 100
         spacing: 45
         padding: 4,4,4,4
         canvas.before:
@@ -35,14 +36,16 @@
                 size: self.width, self.height
                 pos: self.x, self.y
         GuzikWyglad:
-            background_normal: 'PNGS/ButtonON.png'
+
             id: naszguzik
             on_release: root.guzik_click()
 
         GuzikWyglad:
+
             id: naszguzik2
             on_release: root.guzik_click2()
         GuzikWyglad:
+
             id: naszguzik3
             on_release: root.guzik_click3()
 
