@@ -17,6 +17,12 @@ class GuzikWyglad(Button):
 
 class Interface(Widget):
     def odklikujka_Guzika(self):
+        if(self.ids.naszguzik.selected == True):
+            print("Guzik 1 nieaktywny")
+        if (self.ids.naszguzik2.selected == True):
+            print("Guzik 2 nieaktywny")
+        if (self.ids.naszguzik3.selected == True):
+            print("Guzik 3 nieaktywny")
         self.ids.naszguzik.selected = False
         self.ids.naszguzik2.selected = False
         self.ids.naszguzik3.selected = False
@@ -25,19 +31,28 @@ class Interface(Widget):
         nastpepny_stan = not self.ids.naszguzik.selected
         self.odklikujka_Guzika()
         self.ids.naszguzik.selected = nastpepny_stan
-        print("gUZIK  W k l i k n i e n t y")
+        if(nastpepny_stan == True):
+            print("Guzik 1 Aktywny")
+        else:
+            print("Guzik 1 nieaktywny")
 
     def guzik_click2(self):
         nastpepny_stan = not self.ids.naszguzik2.selected
         self.odklikujka_Guzika()
         self.ids.naszguzik2.selected = nastpepny_stan
-        print("guz2  W k l i k n i e n t y")
+        if (nastpepny_stan == True):
+            print("Guzik 2 Aktywny")
+        else:
+            print("Guzik 2 nieaktywny")
 
     def guzik_click3(self):
         nastpepny_stan = not self.ids.naszguzik3.selected
         self.odklikujka_Guzika()
         self.ids.naszguzik3.selected = nastpepny_stan
-        print("guz3  W k l i k n i e n t y")
+        if(nastpepny_stan == True):
+            print("Guzik 3 Aktywny")
+        else:
+            print("Guzik 3 nieaktywny")
 
    # def guzik_clickLED(LED):
        # liczpa = random.randint(1, 5)

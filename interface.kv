@@ -1,5 +1,7 @@
 <GuzikWyglad>
-    canvas:
+    size: 200, 200
+    size_hint: None, None
+    canvas.before:
         Color:
             rgb: (0,0,1) if self.selected else (0.2, 0.7, 0,9)
         Rectangle:
@@ -33,6 +35,7 @@
                 size: self.width, self.height
                 pos: self.x, self.y
         GuzikWyglad:
+            background_normal: 'PNGS/ButtonON.png'
             id: naszguzik
             on_release: root.guzik_click()
 
