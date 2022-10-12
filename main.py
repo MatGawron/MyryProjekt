@@ -6,34 +6,50 @@ from kivy.uix.button import Button
 from kivy.properties import BooleanProperty
 from ctypes import windll, Structure, c_long, byref
 
+
 class LED(Widget):
-    x = BooleanProperty(False)
+    ledzik = BooleanProperty(False)
+
+
 class GuzikWyglad(Button):
     selected = BooleanProperty(False)
+
+
 class Interface(Widget):
     def odklikujka_Guzika(self):
         self.ids.naszguzik.selected = False
         self.ids.naszguzik2.selected = False
         self.ids.naszguzik3.selected = False
+
     def guzik_click(self):
         nastpepny_stan = not self.ids.naszguzik.selected
         self.odklikujka_Guzika()
         self.ids.naszguzik.selected = nastpepny_stan
         print("gUZIK  W k l i k n i e n t y")
+
     def guzik_click2(self):
         nastpepny_stan = not self.ids.naszguzik2.selected
         self.odklikujka_Guzika()
         self.ids.naszguzik2.selected = nastpepny_stan
         print("guz2  W k l i k n i e n t y")
+
     def guzik_click3(self):
         nastpepny_stan = not self.ids.naszguzik3.selected
         self.odklikujka_Guzika()
         self.ids.naszguzik3.selected = nastpepny_stan
         print("guz3  W k l i k n i e n t y")
 
+    def guzik_clickLED(self):
+        nastpepny_stan = not self.ids.naszguzikLED.selected
+        self.odklikujka_Guzika()
+        self.ids.naszguzikLED.selected = nastpepny_stan
+        ledzik = not self.ids.naszguzikLED
+
+
 class InterfaceApp(App):
 
     def build(self):
         return Interface()
+
 
 InterfaceApp().run()
