@@ -4,9 +4,9 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.widget import Widget
 from kivy.uix.button import Button
 from kivy.properties import BooleanProperty
+import random
 from ctypes import windll, Structure, c_long, byref
 
-global ledzik
 class LED(Widget):
     ledzik = BooleanProperty(True)
 
@@ -39,9 +39,12 @@ class Interface(Widget):
         self.ids.naszguzik3.selected = nastpepny_stan
         print("guz3  W k l i k n i e n t y")
 
-    def guzik_clickLED(LED):
-        ledzikk = not LED.ids.led2.ledzik
-        LED.ids.led2.ledzik = ledzikk
+   # def guzik_clickLED(LED):
+       # liczpa = random.randint(1, 5)
+       # xx = "led"+str(liczpa)
+       # print(type(xx))
+       # ledzikk = not LED.ids.led2.ledzik
+       # LED.ids.led2.ledzik = ledzikk
 
 
 class InterfaceApp(App):
