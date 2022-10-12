@@ -1,9 +1,12 @@
 from kivy.app import App
 from kivy.uix.widget import Widget
+from kivy.uix.button import Button
+from kivy.properties import BooleanProperty
 from ctypes import windll, Structure, c_long, byref
 
-import GuzikWyglad
 
+class GuzikWyglad(Button):
+    selected = BooleanProperty(False)
 class Interface(Widget):
     def odklikujka_Guzika(self):
         self.ids.naszguzik.selected = False
