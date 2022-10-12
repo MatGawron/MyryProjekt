@@ -9,16 +9,28 @@
 <Interface>:
     canvas:
         Color:
-            rgb: (1,0,1)
+            rgb: (0.9, 0.9, 0.9)
         Rectangle:
             size: self.width, self.height
             pos: self.x, self.y
-    GuzikWyglad:
-        id: naszguzik
-        on_release: root.guzik_click()
-    GuzikWyglad:
-        id: naszguzik2
-        on_release: root.guzik_click()
-    GuzikWyglad:
-        id: naszguzik3
-        on_release: root.guzik_click()
+    BoxLayout:
+        size_hint: None, None
+        size: 500, 500
+        spacing: 45
+        padding: 4,54,45,4
+        canvas.before:
+            Color:
+                rgb: (1, 0.5, 1,)
+            Rectangle:
+                size: self.width, self.height
+                pos: self.x, self.y
+        GuzikWyglad:
+            id: naszguzik
+            on_release: root.guzik_click()
+
+        GuzikWyglad:
+            id: naszguzik2
+            on_release: root.guzik_click2()
+        GuzikWyglad:
+            id: naszguzik3
+            on_release: root.guzik_click3()
