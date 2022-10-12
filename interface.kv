@@ -23,9 +23,9 @@
             pos: self.x, self.y
     BoxLayout:
         size_hint: None, None
-        size: 500, 500
+        size: 300, 300
         spacing: 45
-        padding: 4,54,45,4
+        padding: 4,4,4,4
         canvas.before:
             Color:
                 rgb: (1, 0.5, 1,)
@@ -66,7 +66,7 @@
             id: led4
         LED:
             id: led5
-        GuzikWyglad:
+        Button:
             id: naszguzikLED
             on_release: root.guzik_clickLED()
 

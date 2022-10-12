@@ -6,9 +6,9 @@ from kivy.uix.button import Button
 from kivy.properties import BooleanProperty
 from ctypes import windll, Structure, c_long, byref
 
-
+global ledzik
 class LED(Widget):
-    ledzik = BooleanProperty(False)
+    ledzik = BooleanProperty(True)
 
 
 class GuzikWyglad(Button):
@@ -39,11 +39,9 @@ class Interface(Widget):
         self.ids.naszguzik3.selected = nastpepny_stan
         print("guz3  W k l i k n i e n t y")
 
-    def guzik_clickLED(self):
-        nastpepny_stan = not self.ids.naszguzikLED.selected
-        self.odklikujka_Guzika()
-        self.ids.naszguzikLED.selected = nastpepny_stan
-        ledzik = not self.ids.naszguzikLED
+    def guzik_clickLED(LED):
+        ledzikk = not LED.ids.led2.ledzik
+        LED.ids.led2.ledzik = ledzikk
 
 
 class InterfaceApp(App):
