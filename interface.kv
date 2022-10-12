@@ -6,6 +6,14 @@
             size: self.width, self.height
             pos: self.x, self.y
 
+<LED>
+    canvas:
+        Color:
+            rgb: (69/255.0,69/255.0,69/255.0) if self.x else (88/255.0, 255/255.0, 51/255.0)
+        Ellipse:
+            pos:(100,200)
+            size:(10,10)
+
 <Interface>:
     canvas:
         Color:
@@ -22,3 +30,5 @@
     GuzikWyglad:
         id: naszguzik3
         on_release: root.guzik_click()
+    LED:
+        id: led1

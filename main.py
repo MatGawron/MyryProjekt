@@ -4,7 +4,8 @@ from kivy.uix.button import Button
 from kivy.properties import BooleanProperty
 from ctypes import windll, Structure, c_long, byref
 
-
+class LED(Widget):
+    x = BooleanProperty(False)
 class GuzikWyglad(Button):
     selected = BooleanProperty(False)
 class Interface(Widget):
