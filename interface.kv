@@ -1,9 +1,9 @@
 <GuzikWyglad>
-    background_color: (214/255.0, 222/255.0, 213/255.0)
-    background_normal: ''
-    canvas:
+    background_color: (0,1,1,0)
+    #background_normal: ''
+    canvas.before:
         Color:
-            rgb: (0,0,1) if self.selected else (0.2, 0.7, 0,9)
+            rgb: (0,1,1)
         RoundedRectangle:
             size: self.size
             pos: self.pos
@@ -20,48 +20,35 @@
 <Interface>:
     canvas:
         Color:
-            rgb: (0.9, 0.9, 0.9)
+            rgb: (0.1, 0.1, 0.9)
         Rectangle:
             size: self.width, self.height
-            pos: self.x, self.y
-    BoxLayout:
-        size_hint: None, None
-        size: 500, 75
-        spacing: 45
-        padding: 4,4,4,4
-        canvas.before:
-            Color:
-                rgb: (214/255.0, 222/255.0, 213/255.0)
-            Rectangle:
-                size: self.width, self.height
-                pos: self.x, self.y
-        GuzikWyglad:
-            id: naszguzik
-            on_release: root.guzik_click()
-            LED:
-                id:ledguzik1
-                pos_hint_x: None
-                pos_hint_y: None
-                pos: 18,50
+            #pos: self.x, self.y
+    #BoxLayout:
+    GuzikWyglad:
+        text: "nie"
+        id: naszguzik
+        on_release: root.guzik_click()
+        size_hint:(1, .3)
+        LED:
+            id:ledguzik1
+            pos: self.x,self.height
 
 
-        GuzikWyglad:
-            id: naszguzik2
-            on_release: root.guzik_click2()
-            LED:
-                id:ledguzik2
-                pos_hint_x: None
-                pos_hint_y: None
-                pos: 18,50
-        GuzikWyglad:
-            id: naszguzik3
-            on_release: root.guzik_click3()
-            LED:
-                id:ledguzik3
-                pos_hint_x: None
-                pos_hint_y: None
-                pos: 18,50
-
+    GuzikWyglad:
+        id: naszguzik2
+        on_release: root.guzik_click2()
+        pos: 100,50
+        LED:
+            id:ledguzik2
+            pos: self.x,self.height
+    GuzikWyglad:
+        id: naszguzik3
+        on_release: root.guzik_click3()
+        pos: 200,100
+        LED:
+            id:ledguzik3
+            pos_hint: {'center_x': 0.2, 'center_y': 0.5}
     GridLayout:
         rows: 2
         cols: 3
