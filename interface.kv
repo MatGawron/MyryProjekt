@@ -111,11 +111,14 @@
         Button:
             id: ButtonRNDM
             on_release: root.ButtonClickLED()
+            size: 130,50
+            background_color: (0,1,1,0)
+            #background_normal: ''
             canvas:
                 Color:
                     rgb: (3/255.0, 218/255.0, 197/255.0)
                 RoundedRectangle:
-                    radius: [10]
                     size: self.size
                     pos: self.pos
+                    radius: [26]
 
