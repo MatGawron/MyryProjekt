@@ -7,29 +7,30 @@ from kivy.properties import BooleanProperty
 import random
 from ctypes import windll, Structure, c_long, byref
 
-class LED(Widget):
-    ledzik = BooleanProperty(True)
 
-class GuzikWyglad(Button):
+class LED(Widget):
+    SelectedLED = BooleanProperty(True)
+
+
+class DefButton(Button):
     selected = BooleanProperty(False)
 
+
 class Interface(Widget):
-    def guzik_click(LED):
-        LED.ids.ledguzik1.ledzik = not LED.ids.ledguzik1.ledzik
+    def ButtonClick1(LED):
+        LED.ids.buttonLED1.SelectedLED = not LED.ids.buttonLED1.SelectedLED
 
-    def guzik_click2(LED):
-        LED.ids.ledguzik2.ledzik = not LED.ids.ledguzik2.ledzik
+    def ButtonClick2(LED):
+        LED.ids.buttonLED2.SelectedLED = not LED.ids.buttonLED2.SelectedLED
 
-    def guzik_click3(LED):
-        LED.ids.ledguzik3.ledzik = not LED.ids.ledguzik3.ledzik
+    def ButtonClick3(LED):
+        LED.ids.buttonLED3.SelectedLED = not LED.ids.buttonLED3.SelectedLED
 
-
-    def guzik_clickLED(LED):
-       # liczpa = random.randint(1, 5)
-       # xx = "led"+str(liczpa)
-       # print(type(xx))
-        ledzikk = not LED.ids.led2.ledzik
-        LED.ids.led2.ledzik = ledzikk
+    def ButtonClickLED(LED):
+        # liczpa = random.randint(1, 5)
+        # xx = "led"+str(liczpa)
+        # print(type(xx))
+         LED.ids.led2.SelectedLED = not LED.ids.led2.SelectedLED
 
 
 class InterfaceApp(App):
