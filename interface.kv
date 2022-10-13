@@ -1,9 +1,10 @@
 <DefButton>
+    size: 130,50
     background_color: (0,1,1,0)
     #background_normal: ''
     canvas.before:
         Color:
-            rgb: (0,1,1)
+            rgb: (3/255.0, 218/255.0, 197/255.0)
         RoundedRectangle:
             size: self.size
             pos: self.pos
@@ -16,38 +17,62 @@
         Ellipse:
             size: (10,10)
             pos: self.x, self.y
+    canvas.before:
+        Color:
+            rgb: (0,0,0)
+        Ellipse:
+            size:(14,14)
+            pos: self.x -2, self.y-2
 
 <Interface>:
     canvas:
         Color:
-            rgb: (0.1, 0.1, 0.9)
+            rgb: (98/255.0, 0, 220/255.0)
         Rectangle:
-            size: self.width, self.height
-            pos: self.x, self.y
-    DefButton:
-        text: "nie"
-        id: button1
-        on_release: root.ButtonClick1()
-        size_hint:(1, .3)
-        LED:
-            id:buttonLED1
-            pos: button1.x+80,button1.y+80
+            pos: self.pos
+            size: self.size
+    GridLayout:
+        rows: 2
+        cols: 2
+        size: 350,150
+        spacing: 10
+        padding: 15
+        canvas:
+            Color:
+                rgb: (98/255.0, 0, 238/255.0)
+            RoundedRectangle:
+                size: self.width, self.height
+                pos: self.x, self.y
+                radius: [30]
+        DefButton:
+            id: button1
+            text: '[color=000000]Tak[/color]'
+            markup: True
+            border: 30,30,30,30
+            border_color: '[color=000000]'
+            on_release: root.ButtonClick1()
+            size_hint:(1, .3)
+            LED:
+                id:buttonLED1
+                pos_hint: button1.x ,button1.y
 
-    DefButton:
-        id: button2
-        on_release: root.ButtonClick2()
-        pos: 100,50
-        LED:
-            id:buttonLED2
-            pos: button2.x+ 80,button2.y + 80
+        DefButton:
+            id: button2
+            text: '[color=000000]Nie[/color]'
+            markup: True
+            on_release: root.ButtonClick2()
+            LED:
+                id:buttonLED2
+                pos: button2.x + 10,button2.y + 20
 
-    DefButton:
-        id: button3
-        on_release: root.ButtonClick3()
-        pos: 200,100
-        LED:
-            id:buttonLED3
-            pos: button3.x+80,button3.y+80
+        DefButton:
+            id: button3
+            text: '[color=000000]Kaczucha[/color]'
+            markup: True
+            on_release: root.ButtonClick3()
+            LED:
+                id:buttonLED3
+                pos: button3.x + 10,button3.y + 20
 
 
 
@@ -60,10 +85,11 @@
         pos: root.width - 120, root.height - 70
         canvas.before:
             Color:
-                rgb: (214/255.0, 222/255.0, 213/255.0)
-            Rectangle:
+                rgb: (90/255.0, 2/255.0, 219/255.0)
+            RoundedRectangle:
                 size: self.width, self.height
                 pos: self.x, self.y
+                radius: [20]
         LED:
             id: led1
         LED:
@@ -77,4 +103,11 @@
         Button:
             id: ButtonRNDM
             on_release: root.ButtonClickLED()
+            canvas:
+                Color:
+                    rgb: (3/255.0, 218/255.0, 197/255.0)
+                RoundedRectangle:
+                    radius: [10]
+                    size: self.size
+                    pos: self.pos
 
