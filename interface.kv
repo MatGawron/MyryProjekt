@@ -2,12 +2,19 @@
     size: 130,50
     background_color: (0,1,1,0)
     #background_normal: ''
-    canvas.before:
+    canvas:
         Color:
             rgb: (3/255.0, 218/255.0, 197/255.0)
         RoundedRectangle:
             size: self.size
             pos: self.pos
+            radius: [26]
+    canvas.before:
+        Color:
+            rgb: (0/255.0, 201/255.0, 182/255.0)
+        RoundedRectangle:
+            size: self.width + 5 , self.height + 5
+            pos: self.x - 5, self.y - 5
             radius: [26]
 
 <LED>
@@ -100,14 +107,8 @@
             id: led4
         LED:
             id: led5
-        Button:
+        DefButton:
             id: ButtonRNDM
             on_release: root.ButtonClickLED()
-            canvas:
-                Color:
-                    rgb: (3/255.0, 218/255.0, 197/255.0)
-                RoundedRectangle:
-                    radius: [10]
-                    size: self.size
-                    pos: self.pos
+
 
