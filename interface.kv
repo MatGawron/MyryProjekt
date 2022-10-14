@@ -28,6 +28,7 @@
             radius: [26]
 
 <Ring>
+    id: niewiem
     canvas.before:
 
         Color:
@@ -60,13 +61,13 @@
             pos: self.x + 10, self.y + 10
 
         Color:
-            rgba: (0,0,0,0.25)
+            rgba: (0,0,0,0.5)
 
         Ellipse:
             size: 120, 120
             pos: self.pos
-            angle_start: -90
-            angle_end: 30
+            angle_start: self.i
+            angle_end: self.i +2
 
 <LED>
     canvas:

@@ -7,7 +7,8 @@ from kivy.properties import BooleanProperty
 from kivy.uix.textinput import TextInput
 import random
 from ctypes import windll, Structure, c_long, byref
-
+import time
+seconds = time.time()
 
 class LED(Widget):
     SelectedLED = BooleanProperty(True)
@@ -18,11 +19,8 @@ class DefButton(Button):
 
 
 class Ring(Widget):
-#    def __init__(self, **kwargs):
-#        super(Ring, self).__init__(**kwargs)
-#       self.war = TextInput(multiline=False, font_size=20)
-#        self.add_widget(self.war)
-    pass
+    for i in range(-90, 50):
+        print(i)
 
 
 class Interface(Widget):
