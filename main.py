@@ -16,6 +16,10 @@ class DefButton(Button):
     selected = BooleanProperty(False)
 
 
+class Ring(Widget):
+    pass
+
+
 class Interface(Widget):
     def ButtonClick1(LED):
         LED.ids.buttonLED1.SelectedLED = not LED.ids.buttonLED1.SelectedLED
