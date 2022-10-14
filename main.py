@@ -4,6 +4,7 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.widget import Widget
 from kivy.uix.button import Button
 from kivy.properties import BooleanProperty
+from kivy.uix.textinput import TextInput
 import random
 from ctypes import windll, Structure, c_long, byref
 
@@ -17,6 +18,10 @@ class DefButton(Button):
 
 
 class Ring(Widget):
+#    def __init__(self, **kwargs):
+#        super(Ring, self).__init__(**kwargs)
+#       self.war = TextInput(multiline=False, font_size=20)
+#        self.add_widget(self.war)
     pass
 
 
