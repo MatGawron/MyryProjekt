@@ -16,10 +16,10 @@ class DefButton(Button):
 
 
 class Ring(Widget):
-    #i = TextInput.ids.tekstInput.text
-    for i in range(-90, 50):
-        print(i)
-    #TextInput.ids.tekstInput.iioi
+# Ustawianie wskaźnika dla Ringa. Od -90 do 90
+
+    i = 10
+
 
 class Interface(Widget):
     def ButtonClick1(LED):
@@ -30,6 +30,9 @@ class Interface(Widget):
 
     def ButtonClick3(LED):
         LED.ids.buttonLED3.SelectedLED = not LED.ids.buttonLED3.SelectedLED
+
+    def ButtonClick4(LED):
+        LED.ids.buttonLED4.SelectedLED = not LED.ids.buttonLED4.SelectedLED
 
     def ButtonClickLED(LED):
         # liczpa = random.randint(1, 5)
